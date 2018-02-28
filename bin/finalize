@@ -21,15 +21,8 @@ echo "-----> Downloading and extracting DB2 CLI driver..."
 curl ${DB2_DSDRIVER_URL} -s -o /home/vcap/clidriver.tgz
 tar xzf /home/vcap/clidriver.tgz -C /home/vcap
 
-
 pwd
 ls
-
-
-
-cd ../
-
-tar -xzvf /home/vcap/app/vendor/macos64_odbc_cli.tar.gz -C /home/vcap/app/vendor/
 
 echo "-----> Running go build finalize"
 GOROOT=$GoInstallDir/go GOPATH=$BUILDPACK_DIR $GoInstallDir/go/bin/go build -o $output_dir/finalize go/finalize/cli
