@@ -13,8 +13,9 @@ output_dir=$(mktemp -d -t finalizeXXX)
 
 echo "-----> Untarring db2 cli driver"
 
-basePath=/home/vcap/app/vendor/
-tar -xzvf $basePathmacos64_odbc_cli.tar.gz -C $basePath
+pwd
+
+tar -xzvf /home/vcap/app/vendor/macos64_odbc_cli.tar.gz -C /home/vcap/app/vendor/
 
 echo "-----> Running go build finalize"
 GOROOT=$GoInstallDir/go GOPATH=$BUILDPACK_DIR $GoInstallDir/go/bin/go build -o $output_dir/finalize go/finalize/cli
