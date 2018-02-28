@@ -17,7 +17,10 @@ pwd
 ls
 
 cd app
+
+pwd
 ls
+
 cd ../
 
 tar -xzvf /home/vcap/app/vendor/macos64_odbc_cli.tar.gz -C /home/vcap/app/vendor/
