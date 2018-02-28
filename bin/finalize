@@ -24,6 +24,11 @@ tar xzf /home/vcap/clidriver.tgz -C /home/vcap
 pwd
 ls
 
+echo "-----> Creating Symlinks"
+ln -s clidriver/lib/libdb2.dylib libdb2.dylib
+ln -s clidriver/lib/libdb2.so.1 libdb2.so.1
+
+
 echo "-----> Running go build finalize"
 GOROOT=$GoInstallDir/go GOPATH=$BUILDPACK_DIR $GoInstallDir/go/bin/go build -o $output_dir/finalize go/finalize/cli
 
