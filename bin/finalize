@@ -16,6 +16,10 @@ echo "-----> Untarring db2 cli driver"
 pwd
 ls
 
+cd app
+ls
+cd ../
+
 tar -xzvf /home/vcap/app/vendor/macos64_odbc_cli.tar.gz -C /home/vcap/app/vendor/
 
 echo "-----> Running go build finalize"
