@@ -16,10 +16,16 @@ echo "-----> Untarring db2 cli driver"
 pwd
 ls
 
-cd app
+DB2_DSDRIVER_URL="https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/linuxx64_odbc_cli.tar.gz"
+echo "-----> Downloading and extracting DB2 CLI driver..."
+curl ${DB2_DSDRIVER_URL} -s -o /home/vcap/clidriver.tgz
+tar xzf /home/vcap/clidriver.tgz -C /home/vcap
+
 
 pwd
 ls
+
+
 
 cd ../
 
