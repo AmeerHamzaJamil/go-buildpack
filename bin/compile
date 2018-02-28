@@ -9,7 +9,7 @@ mkdir -p "$DEPS_DIR/0"
 mkdir -p "$BUILD_DIR/.profile.d"
 echo "export DEPS_DIR=\$HOME/.cloudfoundry" > "$BUILD_DIR/.profile.d/0000_set-deps-dir.sh"
 
-echo Untarring db2 cli driver 
+echo "-----> Untarring db2 cli driver"
 
 tar -xzvf $basePathmacos64_odbc_cli.tar.gz -C $basePath
 
