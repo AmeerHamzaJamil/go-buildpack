@@ -31,6 +31,11 @@ ln -s /home/vcap/clidriver/lib/libdb2.so.1 /home/vcap/app/libdb2.so.1
 pwd
 ls
 
+cd app
+
+pwd
+ls
+
 echo "-----> Running go build finalize"
 GOROOT=$GoInstallDir/go GOPATH=$BUILDPACK_DIR $GoInstallDir/go/bin/go build -o $output_dir/finalize go/finalize/cli
 
