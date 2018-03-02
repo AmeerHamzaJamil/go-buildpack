@@ -40,6 +40,7 @@ export DB2HOME=/home/vcap/clidriver
 export CGO_LDFLAGS=$DB2HOME/lib
 export CGO_CFLAGS=$DB2HOME/include
 export LD_LIBRARY_PATH=$DB2HOME/lib
+export GODEBUG=cgocheck=0
 PATH=$PATH:$DB2HOME:$CGO_LDFLAGS:$CGO_CFLAGS:$LD_LIBRARY_PATH
 export PATH
 
