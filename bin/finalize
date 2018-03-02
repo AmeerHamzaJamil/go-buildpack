@@ -54,7 +54,7 @@ export GODEBUG=cgocheck=0
 
 
 # export PATH="$curDir/bin":"$PATH"
-export DYLD_LIBRARY_PATH=$DB2HOME/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=$DB2HOME/lib
 export IBM_DB_DIR=$DB2HOME
 export IBM_DB_HOME=$DB2HOME
 export IBM_DB_LIB=$DB2HOME/lib
