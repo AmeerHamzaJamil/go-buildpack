@@ -46,10 +46,12 @@ cd lib
 pwd
 ls
 
+echo "----> LD_LIBRARY_PATH: " $LD_LIBRARY_PATH
+
 export DB2HOME=/home/vcap/clidriver
 export CGO_LDFLAGS=-L$DB2HOME/lib
 export CGO_CFLAGS=-I$DB2HOME/include
-export LD_LIBRARY_PATH=$DB2HOME/lib
+export LD_LIBRARY_PATH=$DB2HOME/lib:$LD_LIBRARY_PATH
 export GODEBUG=cgocheck=0
 
 
