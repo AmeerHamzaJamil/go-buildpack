@@ -51,8 +51,22 @@ export CGO_LDFLAGS=$DB2HOME/lib
 export CGO_CFLAGS=$DB2HOME/include
 export LD_LIBRARY_PATH=$DB2HOME/lib
 export GODEBUG=cgocheck=0
-PATH=$PATH:$DB2HOME:$CGO_LDFLAGS:$CGO_CFLAGS:$LD_LIBRARY_PATH:$GODEBUG
+
+
+# export PATH="$curDir/bin":"$PATH"
+export DYLD_LIBRARY_PATH=$DB2HOME/lib:$DYLD_LIBRARY_PATH
+export IBM_DB_DIR=$DB2HOME
+export IBM_DB_HOME=$DB2HOME
+export IBM_DB_LIB=$DB2HOME/lib
+export IBM_DB_INCLUDE=$DB2HOME/include
+export DB2_HOME=$DB2HOME/include
+export INCLUDE=$DB2HOME/include
+export DB2LIB=$DB2HOME/lib
+
+
+PATH=$PATH:$DB2HOME:$CGO_LDFLAGS:$CGO_CFLAGS:$LD_LIBRARY_PATH:$GODEBUG:$IBM_DB_DIR:$IBM_DB_HOME:$IBM_DB_LIB:$IBM_DB_INCLUDE:$DB2_HOME:$INCLUDE:$DB2LIB
 export PATH
+
 
 echo "-----> Running go build finalize"
 GOROOT=$GoInstallDir/go GOPATH=$BUILDPACK_DIR $GoInstallDir/go/bin/go build -o $output_dir/finalize go/finalize/cli
