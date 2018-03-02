@@ -47,8 +47,8 @@ pwd
 ls
 
 export DB2HOME=/home/vcap/clidriver
-export CGO_LDFLAGS=$DB2HOME/lib
-export CGO_CFLAGS=$DB2HOME/include
+export CGO_LDFLAGS=-L$DB2HOME/lib
+export CGO_CFLAGS=-I$DB2HOME/include
 export LD_LIBRARY_PATH=$DB2HOME/lib
 export GODEBUG=cgocheck=0
 
