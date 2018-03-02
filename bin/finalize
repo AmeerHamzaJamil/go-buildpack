@@ -74,5 +74,4 @@ GOROOT=$GoInstallDir/go GOPATH=$BUILDPACK_DIR $GoInstallDir/go/bin/go build -o $
 $output_dir/finalize "$BUILD_DIR" "$CACHE_DIR" "$DEPS_DIR" "$DEPS_IDX" "$PROFILE_DIR"
 
 echo "-----> Creating Symlinks AGAIN"
-ln -s /home/vcap/clidriver/lib/libdb2.dylib /home/vcap/app/libdb2.dylib
 ln -s /home/vcap/clidriver/lib/libdb2.so.1 /home/vcap/app/libdb2.so.1
