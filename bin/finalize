@@ -36,6 +36,11 @@ cd app
 pwd
 ls
 
+cd ../clidriver
+
+pwd
+ls
+
 export DB2HOME=/home/vcap/clidriver
 export CGO_LDFLAGS=$DB2HOME/lib
 export CGO_CFLAGS=$DB2HOME/include
