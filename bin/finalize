@@ -70,6 +70,10 @@ PATH=$PATH:$DB2HOME:$CGO_LDFLAGS:$CGO_CFLAGS:$LD_LIBRARY_PATH:$GODEBUG:$IBM_DB_D
 export PATH
 
 cd /etc/ld.so.conf.d
+
+echo "$DB2HOME/lib" > /etc/ld.so.conf.d/db2.conf
+nano /etc/ld.so.conf.d/db2.conf
+
 pwd
 ls
 
