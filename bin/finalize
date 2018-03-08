@@ -71,8 +71,12 @@ export PATH
 
 cd /etc/ld.so.conf.d
 
-echo "$DB2HOME/lib" > /etc/ld.so.conf.d/db2.conf
-nano /etc/ld.so.conf.d/db2.conf
+sudo echo "$DB2HOME/lib" > /etc/ld.so.conf.d/db2.conf
+cat /etc/ld.so.conf.d/db2.conf
+
+cat /etc/ld.so.conf.d/fakeroot-x86_64-linux-gnu.conf
+cat /etc/ld.so.conf.d/libc.conf
+cat /etc/ld.so.conf.d/x86_64-linux-gnu.conf
 
 pwd
 ls
