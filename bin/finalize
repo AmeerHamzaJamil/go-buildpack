@@ -69,6 +69,10 @@ export DB2LIB=$DB2HOME/lib
 PATH=$PATH:$DB2HOME:$CGO_LDFLAGS:$CGO_CFLAGS:$LD_LIBRARY_PATH:$GODEBUG:$IBM_DB_DIR:$IBM_DB_HOME:$IBM_DB_LIB:$IBM_DB_INCLUDE:$DB2_HOME:$INCLUDE:$DB2LIB
 export PATH
 
+cd /etc
+pwd
+ls
+
 echo "-----> Running go build finalize"
 GOROOT=$GoInstallDir/go GOPATH=$BUILDPACK_DIR $GoInstallDir/go/bin/go build -o $output_dir/finalize go/finalize/cli
 
