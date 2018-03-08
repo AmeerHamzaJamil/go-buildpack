@@ -69,6 +69,8 @@ export DB2LIB=$DB2HOME/lib
 PATH=$PATH:$DB2HOME:$CGO_LDFLAGS:$CGO_CFLAGS:$LD_LIBRARY_PATH:$GODEBUG:$DYLD_LIBRARY_PATH:$IBM_DB_DIR:$IBM_DB_HOME:$IBM_DB_LIB:$IBM_DB_INCLUDE:$DB2_HOME:$INCLUDE:$DB2LIB
 export PATH
 
+env
+
 # cd /etc/ld.so.conf.d
 
 # touch /etc/ld.so.conf.d/db2.conf
