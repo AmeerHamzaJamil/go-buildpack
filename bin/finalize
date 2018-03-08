@@ -27,6 +27,8 @@ ls
 echo "-----> Creating Symlinks"
 ln -s /home/vcap/clidriver/lib/libdb2.dylib /home/vcap/app/libdb2.dylib
 ln -s /home/vcap/clidriver/lib/libdb2.so.1 /home/vcap/app/libdb2.so.1
+ln -sfn /home/vcap /home/vcap/app
+
 
 pwd
 ls
