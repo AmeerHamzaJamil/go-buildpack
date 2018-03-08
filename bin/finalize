@@ -30,7 +30,7 @@ ln -s /home/vcap/clidriver/lib/libdb2.so.1 /home/vcap/app/libdb2.so.1
 
 # ln -s /home/vcap/clidriver/lib/libdb2.so.1 /usr/local/lib/libdb2.so.1
 
-ln -s /home/vcap/clidriver/lib /usr/lib64
+# ln -s /home/vcap/clidriver/lib /usr/lib64
 
 cp /home/vcap/clidriver/lib/libdb2.so.1 /usr/lib64
 
