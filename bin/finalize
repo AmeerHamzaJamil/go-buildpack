@@ -71,6 +71,7 @@ export PATH
 
 cd /etc/ld.so.conf.d
 
+sudo touch /etc/ld.so.conf.d/db2.conf
 sudo echo "$DB2HOME/lib" > /etc/ld.so.conf.d/db2.conf
 cat /etc/ld.so.conf.d/db2.conf
 
