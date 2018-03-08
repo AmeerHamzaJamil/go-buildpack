@@ -66,21 +66,22 @@ export INCLUDE=$DB2HOME/include
 export DB2LIB=$DB2HOME/lib
 
 
-PATH=$PATH:$DB2HOME:$CGO_LDFLAGS:$CGO_CFLAGS:$LD_LIBRARY_PATH:$GODEBUG:$IBM_DB_DIR:$IBM_DB_HOME:$IBM_DB_LIB:$IBM_DB_INCLUDE:$DB2_HOME:$INCLUDE:$DB2LIB
+PATH=$PATH:$DB2HOME:$CGO_LDFLAGS:$CGO_CFLAGS:$LD_LIBRARY_PATH:$GODEBUG:$DYLD_LIBRARY_PATH:$IBM_DB_DIR:$IBM_DB_HOME:$IBM_DB_LIB:$IBM_DB_INCLUDE:$DB2_HOME:$INCLUDE:$DB2LIB
 export PATH
 
-cd /etc/ld.so.conf.d
+# cd /etc/ld.so.conf.d
 
-touch /etc/ld.so.conf.d/db2.conf
-echo "$DB2HOME/lib" > /etc/ld.so.conf.d/db2.conf
-cat /etc/ld.so.conf.d/db2.conf
+# touch /etc/ld.so.conf.d/db2.conf
+# echo "$DB2HOME/lib" > /etc/ld.so.conf.d/db2.conf
+# cat /etc/ld.so.conf.d/db2.conf
 
-cat /etc/ld.so.conf.d/fakeroot-x86_64-linux-gnu.conf
-cat /etc/ld.so.conf.d/libc.conf
-cat /etc/ld.so.conf.d/x86_64-linux-gnu.conf
+# cat /etc/ld.so.conf.d/fakeroot-x86_64-linux-gnu.conf
+# cat /etc/ld.so.conf.d/libc.conf
+# cat /etc/ld.so.conf.d/x86_64-linux-gnu.conf
 
-pwd
-ls
+
+# pwd
+# ls
 
 echo "-----> Running go build finalize"
 GOROOT=$GoInstallDir/go GOPATH=$BUILDPACK_DIR $GoInstallDir/go/bin/go build -o $output_dir/finalize go/finalize/cli
