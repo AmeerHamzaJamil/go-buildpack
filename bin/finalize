@@ -80,8 +80,6 @@ export PATH
 
 env
 
-ldconfig
-
 # cd /etc/ld.so.conf.d
 
 # touch /etc/ld.so.conf.d/db2.conf
