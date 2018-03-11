@@ -13,16 +13,16 @@ output_dir=$(mktemp -d -t finalizeXXX)
 
 echo "-----> Untarring db2 cli driver"
 
-pwd
-ls
+# pwd
+# ls
 
 DB2_DSDRIVER_URL="https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/linuxx64_odbc_cli.tar.gz"
 echo "-----> Downloading and extracting DB2 CLI driver..."
 curl ${DB2_DSDRIVER_URL} -s -o /home/vcap/clidriver.tgz
 tar xzf /home/vcap/clidriver.tgz -C /home/vcap
 
-pwd
-ls
+# pwd
+# ls
 
 # echo "-----> Creating Symlinks"
 # ln -s /home/vcap/clidriver/lib/libdb2.dylib /home/vcap/app/libdb2.dylib
@@ -39,23 +39,23 @@ ls
 # ln -sfn /home/vcap /home/vcap/app
 
 
-pwd
-ls
+# pwd
+# ls
 
-cd app
+# cd app
 
-pwd
-ls
+# pwd
+# ls
 
-cd ../clidriver
+# cd ../clidriver
 
-pwd
-ls
+# pwd
+# ls
 
-cd lib
+# cd lib
 
-pwd
-ls
+# pwd
+# ls
 
 export DB2HOME=/home/vcap/clidriver
 export CGO_LDFLAGS=-L$DB2HOME/lib
@@ -93,8 +93,6 @@ env
 
 # pwd
 # ls
-
-echo "--------------------------------------------------------"
 
 echo "-----> Running go build finalize"
 GOROOT=$GoInstallDir/go GOPATH=$BUILDPACK_DIR $GoInstallDir/go/bin/go build -o $output_dir/finalize go/finalize/cli
